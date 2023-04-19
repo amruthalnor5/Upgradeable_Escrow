@@ -1,0 +1,96 @@
+{
+  "version": "3.4",
+  "log": [
+    {
+      "contracts/Escrow.sol:Escrow": {
+        "src": "contracts\\Escrow.sol:7",
+        "version": {
+          "withMetadata": "8fae3b7118b4ceb62d779ceb2eed0e81baa3fc7a103fe44d9d789260dbb63a7f",
+          "withoutMetadata": "674ee899ad6794d7b92288425d62a4a1492794390a126e7d2220e2ed69a6a20c",
+          "linkedWithoutMetadata": "674ee899ad6794d7b92288425d62a4a1492794390a126e7d2220e2ed69a6a20c"
+        },
+        "inherit": [],
+        "libraries": [],
+        "methods": [
+          "()",
+          "makeTrade(address)",
+          "makeRelease(uint256)",
+          "getTrade(uint256)"
+        ],
+        "linkReferences": [],
+        "errors": [],
+        "layout": {
+          "storage": [
+            {
+              "label": "trades",
+              "offset": 0,
+              "slot": "0",
+              "type": "t_mapping(t_uint256,t_struct(Trade)10_storage)",
+              "contract": "Escrow",
+              "src": "contracts\\Escrow.sol:16"
+            },
+            {
+              "label": "tradeId",
+              "offset": 0,
+              "slot": "1",
+              "type": "t_uint256",
+              "contract": "Escrow",
+              "src": "contracts\\Escrow.sol:18"
+            }
+          ],
+          "types": {
+            "t_address": {
+              "label": "address",
+              "numberOfBytes": "20"
+            },
+            "t_bool": {
+              "label": "bool",
+              "numberOfBytes": "1"
+            },
+            "t_mapping(t_uint256,t_struct(Trade)10_storage)": {
+              "label": "mapping(uint256 => struct Escrow.Trade)",
+              "numberOfBytes": "32"
+            },
+            "t_struct(Trade)10_storage": {
+              "label": "struct Escrow.Trade",
+              "members": [
+                {
+                  "label": "partyA",
+                  "type": "t_address",
+                  "offset": 0,
+                  "slot": "0"
+                },
+                {
+                  "label": "partyB",
+                  "type": "t_address",
+                  "offset": 0,
+                  "slot": "1"
+                },
+                {
+                  "label": "val",
+                  "type": "t_uint256",
+                  "offset": 0,
+                  "slot": "2"
+                },
+                {
+                  "label": "isSuccess",
+                  "type": "t_bool",
+                  "offset": 0,
+                  "slot": "3"
+                }
+              ],
+              "numberOfBytes": "128"
+            },
+            "t_uint256": {
+              "label": "uint256",
+              "numberOfBytes": "32"
+            }
+          },
+          "layoutVersion": "1.2",
+          "flat": true
+        },
+        "solcVersion": "0.8.2"
+      }
+    }
+  ]
+}

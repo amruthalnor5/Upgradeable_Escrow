@@ -1,0 +1,94 @@
+{
+  "manifestVersion": "3.2",
+  "admin": {
+    "address": "0x879b641D1492DBf8aC60E76e97C051060Cc9102B",
+    "txHash": "0x2f6904f0d5aab17d9f3039facd2ff0ad8121eda2225bd74a8b967f2a10a985b3"
+  },
+  "proxies": [
+    {
+      "address": "0x2747ee7C248CAd753ba2Ec6E19859b2EFD73ca3b",
+      "txHash": "0xd8956f1c4bbdb2c4e106103bda223409993ab1f84150187bda68b16d14b6499a",
+      "kind": "transparent"
+    },
+    {
+      "address": "0x1E2eA8CDFDB8152F599b5Ab3b444F14b239fe54e",
+      "txHash": "0xc874dee672124bab11c6518609351c317398a6cd27c352a6e72ee42af9ac1f33",
+      "kind": "transparent"
+    }
+  ],
+  "impls": {
+    "674ee899ad6794d7b92288425d62a4a1492794390a126e7d2220e2ed69a6a20c": {
+      "address": "0xf6D2a11F6537af3c673f40c3eDCffDad565cE86f",
+      "txHash": "0x9c7c3aea18d7eaa8e22f9fbdd0485f3664d4cbb8636c0fc2d5ccb732e59915f9",
+      "layout": {
+        "solcVersion": "0.8.2",
+        "storage": [
+          {
+            "label": "trades",
+            "offset": 0,
+            "slot": "0",
+            "type": "t_mapping(t_uint256,t_struct(Trade)10_storage)",
+            "contract": "Escrow",
+            "src": "contracts\\Escrow.sol:16"
+          },
+          {
+            "label": "tradeId",
+            "offset": 0,
+            "slot": "1",
+            "type": "t_uint256",
+            "contract": "Escrow",
+            "src": "contracts\\Escrow.sol:18"
+          }
+        ],
+        "types": {
+          "t_address": {
+            "label": "address",
+            "numberOfBytes": "20"
+          },
+          "t_bool": {
+            "label": "bool",
+            "numberOfBytes": "1"
+          },
+          "t_mapping(t_uint256,t_struct(Trade)10_storage)": {
+            "label": "mapping(uint256 => struct Escrow.Trade)",
+            "numberOfBytes": "32"
+          },
+          "t_struct(Trade)10_storage": {
+            "label": "struct Escrow.Trade",
+            "members": [
+              {
+                "label": "partyA",
+                "type": "t_address",
+                "offset": 0,
+                "slot": "0"
+              },
+              {
+                "label": "partyB",
+                "type": "t_address",
+                "offset": 0,
+                "slot": "1"
+              },
+              {
+                "label": "val",
+                "type": "t_uint256",
+                "offset": 0,
+                "slot": "2"
+              },
+              {
+                "label": "isSuccess",
+                "type": "t_bool",
+                "offset": 0,
+                "slot": "3"
+              }
+            ],
+            "numberOfBytes": "128"
+          },
+          "t_uint256": {
+            "label": "uint256",
+            "numberOfBytes": "32"
+          }
+        }
+      }
+    }
+  }
+}
